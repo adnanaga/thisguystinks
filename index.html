@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://use.typekit.net/thd5xcr.css">
+  <meta name="og:image" content="thisguystinks.jpg"/>
+</head>
+<body>
+    <div id="play_button" class="img_cover">
+        <div class="click_here">
+            Your friend wants you to click here
+        </div>
+    </div>
+    <video id="main" autoplay playsinline loop>
+        <source src="thisguystinks.mp4" type="video/mp4">
+      </video>
+    
+</body>
+<style type="text/css">
+    body {
+        font-family: fino-sans, sans-serif;
+font-weight: 400;
+font-style: italic;
+margin: 0;
+    }
+    video
+ {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+ }
+.img_cover {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(24, 25, 23, 1);
+    color: #FBFAF8;
+    font-size: 8vw;
+    text-align: center;
+    margin:auto;
+}
+
+</style>
+<script>
+    var playButton = document.getElementById("play_button");
+    var video = document.getElementById("main");
+// Event listener for the play/pause button
+playButton.addEventListener("click", function() {
+  if (video.paused == true) {
+    // Play the video
+    console.log("This guy stinks")
+    video.play();
+
+    // Update the button text to 'Pause'
+    this.style.display = 'none';
+  }
+});
+</script>
+</html>
+
